@@ -36,7 +36,7 @@ function Pizza() {
       .catch(error => setError(error));
   };
 
-  const handleUpdate = (item) => {
+  const handleUpdate = (updatedItem) => {
     
     console.log(`update item? ${JSON.stringify(updatedItem)}`)
 
