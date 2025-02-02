@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000, // Client port
     proxy: {
       '/pizzas': {
-        target: 'http://localhost:5100', // Mock server port
+        target: 'http://localhost:5073',
         changeOrigin: true,
         secure: false,
         ws: true,
@@ -22,7 +22,7 @@ export default defineConfig({
           proxy.on('proxyReq', (proxyRes, req, _res) => {
             console.log('Received Response from the target:', proxyRes.statusCode, req.url);
           });
-        }
+        },
       }
     }
   }
